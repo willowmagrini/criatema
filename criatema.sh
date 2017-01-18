@@ -1,8 +1,13 @@
 #!/bin/bash
-# uso: ./criatema.sh slug nome cpt=slug,singular,plural,[0|1],tema 
+# uso: ./criatema.sh slug nome cpt=slug,singular,plural,[0|1],tema
 if [ -z "$1" ]
 	then 
-	echo "# uso: ./criatema.sh slug nome cpt=slug,singular,plural,[0 para masculino |1 para feminino],tema "
+	echo "
+	# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+	# uso: ./criatema.sh slug nome cpt=slug,singular,plural,[0 para masculino |1 para feminino],tema
+	# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+	"
+
 	exit 1;
 fi
 # # $1 = pasta e nome do tema
@@ -26,7 +31,7 @@ cat ajax.mod > $dir_tema/inc/ajax-functions.php
 cat javascript.mod > $dir_tema/assets/js/src/javascript.js
 cp Gruntfile.js $dir_tema/src;
 cd $dir_tema/src;
-sudo npm install;
+npm install;
 
 
 
@@ -86,7 +91,7 @@ do
     		plural_cpt=${cpt_arr[2]}; 
     		genero_cpt=${cpt_arr[3]}; 
     		cd $diretorio;
-    		./modulo_cpt.sh $slug_cpt $singular_cpt $plural_cpt $genero_cpt $slug
+    		./modulo_cpt.sh $slug_cpt $singular_cpt $plural_cpt $genero_cpt $slug $dir_tema
 			;;
 
     		*)
