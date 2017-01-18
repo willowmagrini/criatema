@@ -86,7 +86,7 @@ do
     		plural_cpt=${cpt_arr[2]}; 
     		genero_cpt=${cpt_arr[3]}; 
     		cd $diretorio;
-    		./mod_cpt.sh $slug_cpt $singular_cpt $plural_cpt $genero_cpt $slug
+    		./modulo_cpt.sh $slug_cpt $singular_cpt $plural_cpt $genero_cpt $slug
 			;;
 
     		*)
